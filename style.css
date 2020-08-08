@@ -18,3 +18,48 @@ body {
     width: 1px;
     overflow: hidden;
 }
+
+html,
+body {
+    min-width: 1440px;
+    min-height: 4777px;
+}
+
+body {
+    /*Временно для сетки */
+    background-image: url('https://assets.htmlacademy.ru/content/skills/6/case-02/index.jpg');
+    background-size: 1440px auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.page {
+    display: grid;
+    grid-template-rows: 
+    auto
+    1fr
+    auto;
+    grid-template-areas: 
+    "header"
+    "content"
+    "footer";
+    min-height: 100vh;
+}
+
+.page-header {
+    grid-area: header;
+    
+    /*Временно для сетки*/
+    min-height: 80px;
+}
+
+.page-content {
+    grid-area: content;
+}
+
+.page-footer {
+    grid-area: footer;
+    
+    /*Временно для сетки*/
+    min-height: 100px;
+}
