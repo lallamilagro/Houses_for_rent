@@ -33,6 +33,13 @@ body {
     background-position: top center;
 }
 
+.container {
+    width: 1380px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 .page {
     display: grid;
     grid-template-rows: 
@@ -62,4 +69,56 @@ body {
     
     /*Временно для сетки*/
     min-height: 100px;
+}
+
+.page-nav {
+    display: grid;
+    grid-template-columns: auto 1 fr auto auto;
+    grid-column-gap: 65px;
+}
+
+.logo-container {
+    padding: 20px 110px 20px 0;
+    text-align: center;
+
+    /*Временно для сетки*/
+    min-height: 30px;
+    min-width: 97px;
+}
+
+.search-container {
+    padding: 25px 0 23px;
+
+    /*Временно для сетки*/
+    min-height: 16px;
+    min-width: 16px;
+}
+
+.user-nav {
+    padding: 25px 0 23px;
+
+    /*Временно для сетки*/
+    min-height: 20px;
+    min-width: 188px;
+}
+
+.site-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.site-nav-item {
+    padding-right: 65px;
+
+    /*Временно для сетки*/
+    min-height: 32px;
+    min-width: 135px;
+}
+
+.site-nav-item:last-child {
+    padding-right: 0;
 }
