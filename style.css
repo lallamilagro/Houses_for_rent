@@ -8,7 +8,7 @@ body {
     line-height: 32px;
     color: #333333;
 }
-
+  
 .visually-hidden {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
@@ -18,90 +18,90 @@ body {
     width: 1px;
     overflow: hidden;
 }
-
+  
 html,
 body {
     min-width: 1440px;
     min-height: 4777px;
 }
-
+  
 body {
-    /*Временно для сетки */
+    /* Временно для сетки */
     background-image: url('https://assets.htmlacademy.ru/content/skills/6/case-02/index.jpg');
     background-size: 1440px auto;
     background-repeat: no-repeat;
     background-position: top center;
 }
-
+  
 .container {
     width: 1380px;
     margin: 0 auto;
     padding-left: 30px;
     padding-right: 30px;
 }
-
+  
 .page {
     display: grid;
-    grid-template-rows: 
-    auto
-    1fr
-    auto;
-    grid-template-areas: 
-    "header"
-    "content"
-    "footer";
+    grid-template-rows:
+      auto
+      1fr
+      auto;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
     min-height: 100vh;
 }
-
+  
 .page-header {
     grid-area: header;
     
-    /*Временно для сетки*/
+    /* Временно для сетки */
     min-height: 80px;
 }
-
+  
 .page-content {
     grid-area: content;
 }
-
+  
 .page-footer {
     grid-area: footer;
     
-    /*Временно для сетки*/
+    /* Временно для сетки */
     min-height: 100px;
 }
-
+  
 .page-nav {
     display: grid;
-    grid-template-columns: auto 1 fr auto auto;
+    grid-template-columns: auto 1fr auto auto;
     grid-column-gap: 65px;
 }
-
+  
 .logo-container {
     padding: 20px 110px 20px 0;
     text-align: center;
-
-    /*Временно для сетки*/
-    min-height: 30px;
+    
+    /* Временно для сетки */
+    min-height: 30px; 
     min-width: 97px;
 }
-
+  
 .search-container {
     padding: 25px 0 23px;
-
-    /*Временно для сетки*/
-    min-height: 16px;
-    min-width: 16px;
+    
+    /* Временно для сетки */
+    min-height: 16px; 
+    min-width: 16px;  
 }
-
+  
 .user-nav {
     padding: 25px 0 23px;
-
-    /*Временно для сетки*/
-    min-height: 20px;
+    
+    /* Временно для сетки */
+    min-height: 20px; 
     min-width: 188px;
 }
-
+  
 .site-nav {
     padding: 0;
     margin: 0;
@@ -110,30 +110,30 @@ body {
     align-items: center;
     flex-wrap: wrap;
 }
-
+  
 .site-nav-item {
     padding-right: 65px;
-
-    /*Временно для сетки*/
-    min-height: 32px;
-    min-width: 135px;
+    
+    /* Временно для сетки */
+    min-height: 32px; 
+    min-width: 135px;  
 }
-
+  
 .site-nav-item:last-child {
     padding-right: 0;
 }
-
+  
 .welcome {
     padding-bottom: 100px;
 }
-
+  
 .welcome-content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(5, auto);
     grid-column-gap: 24px;
 }
-
+  
 .welcome-city {
     grid-area: 1 / 2 / 2 / 8;
   
@@ -212,7 +212,7 @@ body {
   
 .slider-controls {
     grid-area: 5 / 6 / 6 / -1;
-
+    
     display: grid;
     grid-template-columns: auto auto 1fr;
 }
@@ -225,12 +225,14 @@ body {
 }
   
 .slider-page {
+    margin: 10px 30px 0 0;
+    text-align: right;
   
     /* Временно для сетки */
     min-height: 56px; 
     min-width: 50px; 
 }
-
+  
 .place {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -249,12 +251,12 @@ body {
   
 .place-content {
     grid-column: 1 / -1;
-
+  
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 24px;
 }
-
+  
 .place-content > * {
     grid-column: 5 / 9;
 }
@@ -264,7 +266,7 @@ body {
     margin-bottom: 25px;
   
     /* Временно для сетки */
-    min-height: 130px; 
+    min-height: 170px; 
     min-width: 440px;
 }
   
@@ -301,10 +303,10 @@ body {
     grid-column: 2 / 4;
     margin-top: 20px;
 }
-
+  
 .catalog {
     padding: 0 0 140px 0;
-  }
+}
   
 .catalog header {
     /* Временно для сетки */
@@ -316,7 +318,7 @@ body {
     grid-template-columns: repeat(12, 1fr);
     gap: 24px;
 }
-
+  
 .card-item {
     grid-column: span 3;
     border: 1px solid #c4c4c4;
@@ -342,20 +344,6 @@ body {
     /* Временно для сетки */
     min-height: 165px;
 }
-
-.card-content h3 {
-    margin: 0 0 5px 0;
-  
-    /* Временно для сетки */
-    min-height: 34px;
-}
-  
-.card-content p {
-    margin: 0 0 17px 0;
-  
-    /* Временно для сетки */
-    min-height: 34px;
-}
   
 .card-content h3 {
     margin: 0 0 5px 0;
@@ -375,9 +363,16 @@ body {
     margin: 0;
     padding: 15px 0 0 0;
     
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
   
     /* Временно для сетки */
     min-height: 34px;
+}
+  
+.card-horizontal dl {
+    grid-column-gap: 175px;
 }
   
 .card-content dt {
@@ -390,51 +385,14 @@ body {
   
 .card-content dd {
     margin: 0;
-  
-    /* Временно для сетки */
-    min-height: 36px;
-    min-width: 36px;
-}
-
-.card-content h3 {
-    margin: 0 0 5px 0;
-  
-    /* Временно для сетки */
-    min-height: 34px;
-}
-  
-.card-content p {
-    margin: 0 0 17px 0;
-  
-    /* Временно для сетки */
-    min-height: 34px;
-}
-  
-.card-content dl {
-    margin: 0;
-    padding: 15px 0 0 0;
     
-  
-    /* Временно для сетки */
-    min-height: 34px;
-}
-  
-.card-content dt {
-    margin: 0;
-  
-    /* Временно для сетки */
-    min-height: 20px;
-    min-width: 70px;
-}
-  
-.card-content dd {
-    margin: 0;
+    grid-row: 1 / 2;
   
     /* Временно для сетки */
     min-height: 36px;
     min-width: 36px;
 }
-
+  
 .feedback {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -537,3 +495,51 @@ body {
     /* Временно для сетки */
     min-height: 36px;
 }
+  
+.page-footer-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+  
+.page-footer-logo {
+    margin: 30px 0;
+  
+    /* Временно для сетки */
+    min-height: 30px; 
+    min-width: 97px;
+}
+  
+.page-footer-nav {
+    padding: 0 0 0 135px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    /* Временно для сетки */
+    min-height: 32px;
+}
+  
+.page-footer-nav-item {
+    padding-right: 65px;
+    
+    /* Временно для сетки */
+    min-height: 32px;
+    min-width: 135px;
+}
+  
+.page-footer-nav-item:last-child {
+    padding-right: 0;
+}
+  
+.copyright {
+    margin-top: 30px;
+    
+    /* Временно для сетки */
+    min-height: 32px;
+    min-width: 230px;
+}
+  
+  
