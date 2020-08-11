@@ -7,6 +7,7 @@ body {
     font-size: 16px;
     line-height: 32px;
     color: #333333;
+    counter-reset: section-counter;
 }
   
 .visually-hidden {
@@ -26,7 +27,7 @@ body {
     padding-right: 30px;
 }
   
- .page {
+.page {
     display: grid;
     grid-template-rows:
       auto
@@ -41,6 +42,7 @@ body {
   
 .page-header {
     grid-area: header;
+    background-color: #f2f8fb;
 }
   
 .page-content {
@@ -49,6 +51,81 @@ body {
   
 .page-footer {
     grid-area: footer;
+    background-color: #f2f8fb;
+}
+  
+.page-link {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #06a9b3;
+}
+  
+.button {
+    display: inline-block;
+    padding: 16px 32px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    background-color: #06a9b3;
+    text-decoration: none;
+    border: none;
+}
+  
+.page-content h1 {
+    margin: 0;
+    font-size: 44px;
+    line-height: 62px;
+    color: #333333;
+}
+  
+.section h2 {
+    position: relative;
+    margin: 0;
+    padding: 0 0 0 115px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #06a9a3;
+}
+  
+.section h2::before {
+    counter-increment: section-counter;     /* Инкрементирует счетчик*/
+    content: "0" counter(section-counter);  /* Отображает текущее значение счетчика */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: #06a9b3;
+}
+  
+.section h2::after {
+    content: "";
+    position: absolute;
+    width: 81px;
+    height: 1px;
+    left: 25px;
+    top: 9px;
+    border-top: 1px solid #06a9b3;
+}
+  
+.section h3 {
+    margin: 60px 0 25px 0;
+    font-size: 32px;
+    line-height: 48px;
+}
+  
+.section-centered-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 13px;
 }
   
 .page-nav {
@@ -64,6 +141,17 @@ body {
   
 .search-container {
     padding: 25px 0 23px;
+}
+  
+.search {
+    display: block;
+    width: 16px;
+    height: 16px;
+    padding: 7px 0;
+    background-image: url("https://assets.htmlacademy.ru/content/skills/6/case-02/img/search.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
 }
   
 .user-nav {
@@ -89,6 +177,7 @@ body {
   
 .welcome {
     padding-bottom: 100px;
+    background-color: #f2f8fb;
 }
   
 .welcome-content {
@@ -101,6 +190,11 @@ body {
 .welcome-city {
     grid-area: 1 / 2 / 2 / 8;
     margin: 80px 0 10px 0;
+  
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #aaaaaa;
 }
   
 .welcome h1 {
@@ -112,6 +206,11 @@ body {
     grid-area: 3 / 2 / 4 / 8;
     z-index: 1;
     margin: 10px 0 40px 0;
+    
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 34px;
+    color: #333333;
 }
   
 .welcome-button {
@@ -119,12 +218,15 @@ body {
     margin-bottom: 90px;
 }
   
-.button {
-  
-}
-  
 .welcome-img-container {
     grid-area: 1 / 6 / -1 / -1;  
+}
+  
+.welcome-img-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
   
 .social-media {
@@ -147,6 +249,30 @@ body {
     margin-right: 0;
 }
   
+.social-media-link {
+    display: block;
+    width: 44px;
+    height: 44px;
+}
+  
+.social-media-link-facebook {
+    background-image: url("https://assets.htmlacademy.ru/content/skills/6/case-02/img/facebook.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+  
+.social-media-link-instagram {
+    background-image: url("https://assets.htmlacademy.ru/content/skills/6/case-02/img/instagram.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+  
+.social-media-link-vk {
+    background-image: url("https://assets.htmlacademy.ru/content/skills/6/case-02/img/vk.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+  
 .slider-controls {
     grid-area: 5 / 6 / 6 / -1;
     
@@ -159,19 +285,64 @@ body {
     height: 66px;
     padding: 0;
     border: none;
+    background-color: #ffffff;
+}
+  
+.slider-button-prev {
+    background-image: url("https://assets.htmlacademy.ru/content/skills/6/case-02/img/arrow-left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 16px;
+}
+  
+.slider-button-next {
+    background-image: url("https://assets.htmlacademy.ru/content/skills/6/case-02/img/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 16px;
 }
   
 .slider-page {
-    margin: 10px 30px 0 0; 
+    margin: 10px 30px 0 0;
     text-align: right;
+    
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 48px;
+    color: #ffffff;
 }
   
 .place {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 24px;
     margin-top: 100px;
     margin-bottom: 95px;
+}
+  
+.place::before {
+    content: "01";
+    position: absolute;
+    left: 145px;
+    top: 0;
+    font-weight: 900;
+    font-size: 65px;
+    line-height: 65px;
+    color: #eaf2f6;
+}
+  
+.place::after {
+    content: "Место";
+    position: absolute;
+    left: 145px;
+    top: 60px;
+    font-weight: 900;
+    font-size: 65px;
+    line-height: 65px;
+    color: #eaf2f6;
+    writing-mode: vertical-lr;
+    transform: scale(-1, -1) translateY(-40px);
 }
   
 .place header {
@@ -202,7 +373,12 @@ body {
 .place-content blockquote {
     grid-column: 4 / 10;
     margin: 0 0 35px 0;
+    padding-left: 30px;
   
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 40px;
+    border-left: 1px solid #06a9b3;
 }
   
 .big-pic {
@@ -212,24 +388,27 @@ body {
 .place-button-container {
     grid-column: 5 / 8;
     margin-top: 10px;
-  
 }
   
 .article-aside-right {
     grid-column: -4 / -2;
+    
+    font-size: 14px;
+    line-height: 24px;
 }
   
 .article-aside-left {
     grid-column: 2 / 4;
     margin-top: 20px;
+    
+    font-size: 14px;
+    line-height: 24px;
 }
   
 .catalog {
     padding: 0 0 140px 0;
-}
-  
-.catalog header {
     
+    background-color: #f2f8fb;
 }
   
 .catalog-content {
@@ -248,6 +427,8 @@ body {
       220px
       auto;
     grid-gap: 17px 24px;
+    
+    background-color: #ffffff;
 }
   
 .card-horizontal {
@@ -261,12 +442,32 @@ body {
     padding: 0 24px 23px;
 }
   
+.card-horizontal .card-content {
+    padding: 20px 24px 24px 0;
+}
+  
+.card-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
 .card-content h3 {
     margin: 0 0 5px 0;
+    
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 34px;
+    color: #333333;
 }
   
 .card-content p {
     margin: 0 0 17px 0;
+    
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #aaaaaa;
 }
   
 .card-content dl {
@@ -277,6 +478,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 50px;
   
+    border-top: 2px solid #eaf2f6;
 }
   
 .card-horizontal dl {
@@ -285,12 +487,20 @@ body {
   
 .card-content dt {
     margin: 0;
+    
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
 }
   
 .card-content dd {
     margin: 0;
     
     grid-row: 1 / 2;
+    
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 36px;
 }
   
 .feedback {
@@ -343,7 +553,7 @@ body {
 .name {
     grid-area: name;
 }
-
+  
 .surname {
     grid-area: surname;  
 }
@@ -368,6 +578,64 @@ body {
   
 .submit {
     grid-area: submit;
+}
+  
+.feedback-form label {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    color: #333333;
+}
+  
+.field {
+    width: 100%;
+    padding: 12px 16px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+    border: 1px solid #cfdce3;
+    box-sizing: border-box;
+}
+  
+.field::placeholder {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(51, 51, 51, 0.3);
+}
+  
+.text-label {
+    max-width: 180px;
+    display: inline-block;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+}
+  
+.checkbox label {
+    position: relative;
+    padding-left: 25px;
+}
+  
+.checkbox label::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    border: 1px solid #cfdce3;
+    left: 0;
+    top: 0;
+}
+  
+.checkbox input:checked + label::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    background-color: #06a9b3;
+    left: 4px;
+    top: 4px;
 }
   
 .page-footer-wrapper {
